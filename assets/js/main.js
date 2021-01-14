@@ -1,6 +1,7 @@
+//GamePlay
 const config = {
   type: Phaser.AUTO,
-  width: 1000,
+  width: 3000,
   height: 600,
   physics: {
     default: 'arcade',
@@ -15,15 +16,19 @@ const config = {
     update: update,
   },
 };
+let game = new Phaser.Game(config);
 
+//Declare objects
 let player;
 let stars;
 let platforms;
+// var enemies = [];
+// var enemiesToSpawn = 10;
+// var enemiesLeft = enemiesToSpawn;
+// var enemiesAreSafe = ture;
 let cursors;
 let score = 0;
 let scoreText;
-
-let game = new Phaser.Game(config);
 
 //加载图像
 function preload() {
